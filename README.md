@@ -1,4 +1,4 @@
-# chessssss
+# chessssss ♛
 a basic chess game which allows two users to play against each other online the project is not yet compleated  
 mainly frontend and user authorization are pending will be compleating soon 
 
@@ -18,11 +18,17 @@ To run Chess on your local machine, follow these steps:
 ```bash
 npm install
 ```
-4.Start the client server:
+4.Start the client server: 
+```bash
+cd client
+```
 ```bash
 node app
 ```
 4.Start the api server:
+```bash
+cd server
+```
 ```bash
 node server
 ```
