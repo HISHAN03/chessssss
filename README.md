@@ -1,7 +1,6 @@
 # chessssss ♛
-a basic chess game which allows two users to play against each other online the project is not yet compleated  
-mainly frontend and user authorization are pending will be compleating soon 
-
+- a basic chess game which allows two users to compeate  against each other. you can also chat with ur opponent in real-time during 
+- the frontend of this project can be better.you guyz can contribute 
 
 To run Chess on your local machine, follow these steps:
 
@@ -19,6 +18,7 @@ To run Chess on your local machine, follow these steps:
 npm install
 ```
 4.Start the client server: 
+cd to client
 ```bash
 cd client
 ```
@@ -26,12 +26,15 @@ cd client
 node app
 ```
 4.Start the api server:
+cd to server
 ```bash
 cd server
 ```
 ```bash
 node server
 ```
+
+## Screenshots 
 
 ## Contributing
 We welcome contributions from the community to enhance ChatApp further. If you have any ideas or improvements,
