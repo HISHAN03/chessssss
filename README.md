@@ -39,7 +39,7 @@ node server
 
 ![Screenshot_20230903_181754](https://github.com/HISHAN03/chessssss/assets/108483712/86fd654e-e391-48a1-bad3-70c770b19941)
 - Game section
-
+ frontend can be better as i said feel free to contribute 🤝
 ![Screenshot_20230903_181736](https://github.com/HISHAN03/chessssss/assets/108483712/bb956df3-c6d2-491a-9f7c-9b8b5994b395)
 ## Contributing
 We welcome contributions from the community to enhance ChatApp further. If you have any ideas or improvements,
