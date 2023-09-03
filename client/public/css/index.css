@@ -1,0 +1,111 @@
+ body {
+            display: flex;
+            flex-direction: row; /* Display children horizontally */
+            margin: 0;
+            height: 100vh;
+        }
+
+        #board-container {
+            flex: 60%; /* 60% of the available width */
+            display: flex;
+            flex-direction: column; /* Stack elements vertically inside the chess container */
+            align-items: center; /* Center chess board vertically */
+            justify-content: center; /* Center chess board horizontally */
+            background-color:#d18ef5; /* Background color for chess board */
+        }
+       
+
+#message-container {
+  background-color: #e2e2e2;
+  height: 410px;
+  width: 50%;
+  overflow-y: auto;
+  padding: 10px;
+  margin: 0px 30px 30px 30px;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+        
+
+        #myBoard {
+            width: 400px;
+        }
+
+        #message-box-container {
+            flex: 40%; /* 40% of the available width */
+            display: flex;
+            flex-direction: column; /* Stack elements vertically inside the chat container */
+            align-items: center; /* Center chat horizontally */
+            justify-content: flex-end; /* Align chat messages at the bottom */
+            background-color: #d18ef5; /* Background color for chat */
+            padding: 20px;
+        }
+        h1 {
+            color: #000000;
+            font-family: 'Rancho', serif;
+            font-size: 46px; /* Adjust the size as needed */
+        }
+        
+    
+        #message-form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 20px;
+        }
+        #status {
+            font-weight: bold; /* Make the text bold */
+            display: inline-block; /* Make both label and status text appear on the same line */
+            vertical-align: middle; /* Vertically align the text */
+        }
+
+        #message-input {
+            flex: 1; /* Take up available space */
+            padding: 5px 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        #message-input::placeholder {
+            color: #000000;
+        }
+
+        #message-input:focus {
+            outline: none;
+        }
+
+        #message-form button {
+            background-color: #6b42f4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        #message-form button:hover {
+            background-color: #5438c1;
+        }
+
+        /* Style for chat messages list */
+        #messages-list {
+            list-style-type: none;
+            padding: 0;
+            overflow-y: auto;
+            max-height: 80%; /* Limit the chat messages height */
+        }
+
+        #h3
+        {
+            color: #000000;
+            font-family: 'Rancho', serif;
+            font-size: 26px; /
+
+        }
+        .ww
+        {
+            color: #000000;
+            font-family: 'Rancho', serif;
+            font-size: 26px; / 
+        }

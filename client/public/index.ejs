@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>chess</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
 
+
+<link rel="stylesheet" type="text/css" href="./css/index.css">
     <link
     rel="stylesheet"
     href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
@@ -23,15 +28,31 @@
         <script src="./js/jquery-3.7.0.min.js"></script>
     </head>
     <body>
-      <div id="myBoard" style="width: 400px"></div>
-        <label>Status:</label>
-        <div id="status"></div>
-        <label>FEN:</label>
-        <div id="fen"></div>
-        <label>PGN:</label>
-        <div id="pgn"></div>
+      <div id="board-container">
+        <h1 class="font-effect-shadow-multiple" >CHESSS</h1>
+        <div id="myBoard" style="width: 400px"></div>
+        <label id="h3">Status:   
+        </label>
+          <div id="status" class="ww"></div>   
+     
+      </div>
+      <div id="message-box-container">
+
+        <h1 class="font-effect-shadow-multiple" >chat-box</h1>
+        <div id="message-container">
+          <!-- Messages will be displayed here -->
+        </div>
+        <form id="message-form">
+          <input type="text" id="message-input" placeholder="Enter your message" required>
+          <button type="submit">Send</button>
+        </form>
+        <ul id="messages-list"></ul>  
+      </div>
+        
        
         <script>
+
+
   
             let playerColor = '<%= color %>';
     console.log('Playing as ' + playerColor);

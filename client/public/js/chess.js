@@ -2,6 +2,71 @@ let socket = io("http://localhost:8080");
 let gameOver = false;
 let gameHasStarted = false;
 
+
+
+const messageForm = document.querySelector('#message-form');
+messageForm.addEventListener('submit', (event) => {
+  console.log("sending")
+  event.preventDefault();
+  const messageInput = document.querySelector('#message-input');
+  console.log(messageInput)
+  const message = {
+    text: messageInput.value
+  };
+  socket.emit('newMessage', message);
+  messageInput.value = '';
+  //displayMessage({ username: 'You', text: message.text });
+});
+
+socket.on('chatMessage', (message) => {
+  
+  console.log(`Received message: ${message.text}`);
+  
+  // Send the message to other users
+  displayMessage(message);
+
+});
+
+
+// socket.on('nMessage', (message) => {
+
+//   const messagesList = document.querySelector('#messages-list');
+
+//   const messageItem = document.createElement('li');
+
+//   messageItem.textContent = ` ${message.text}`;
+
+//   messagesList.appendChild(messageItem);
+
+// });
+function displayMessage(message) {
+  const messageContainer = document.querySelector('#message-container');
+
+  const messageElement = document.createElement('div');
+  
+  messageElement.classList.add('message');
+  
+  messageElement.innerHTML = `<span class="username">${message.username}: </span>${message.text}`;
+  
+  messageContainer.appendChild(messageElement);
+}
+
+
+// function sendMessage() {
+//   try {
+//     const messageInput = document.getElementById('messageInput');
+//     const message = messageInput.value;
+//     io.emit('sendMessage', message);
+//     messageInput.value = '';
+//     displayMessage('You', message);
+//   } catch (error) {
+//     console.error('Error sending message:', error);
+//     // Handle the error appropriately, e.g., logging, displaying an error message, etc.
+//   }
+// }
+
+
+
 socket.on("welcome", (data) => {
    console.log("Message: ", data);
 });
@@ -35,6 +100,30 @@ function onDragStart (source, piece, position, orientation) {
     return false
   }
 }
+socket.on('newMessage', (message) => {
+  
+  console.log(`Received message: ${message.text}`);
+  
+  // Update the UI with the new message
+  displayMessage(message);
+});
+
+function displayMessage(message) {
+  const messageContainer = document.querySelector('#message-container');
+
+  const messageElement = document.createElement('div');
+  
+  messageElement.classList.add('message');
+  
+  messageElement.innerHTML = `${message.text}`;
+  
+  messageContainer.appendChild(messageElement);
+}
+
+
+
+
+
 
 
 function onDrop (source, target) {
